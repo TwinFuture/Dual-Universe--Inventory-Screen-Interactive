@@ -315,7 +315,7 @@ local getItems = function(current, section)
     for i = current, section do
         local style = ''
         if i == 5 or i == 10 then
-            style = 'style="float:none;margin:0 auto;"'
+            style = 'style="float:none;margin:0 auto"'
         end
         if itemList[i].title then
             htmlBody = htmlBody .. '<table '.. style ..'><tbody><tr><th colspan=3>'.. itemList[i].title..'</th></tr>'
