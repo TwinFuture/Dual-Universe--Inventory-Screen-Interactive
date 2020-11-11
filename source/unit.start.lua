@@ -309,7 +309,7 @@ local getItems = function(current, section)
             end
         end
     end
-    local htmlBody = '<div class="head">Stars Inventory</div>'
+    local htmlBody = '<div class="head">Inventory</div>'
     -- Here we are going to iterate though the list at given index (current)
     -- and stop at section.
     for i = current, section do
