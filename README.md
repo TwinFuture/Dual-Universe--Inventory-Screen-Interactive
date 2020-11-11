@@ -15,7 +15,7 @@ EG: Container name; Bauxite, Aluminium, Basic Screw, Nitron Fuel -- Please use U
 2) Right click the Programming Board and Edit Lua Parameters.
   > ***Refresh*** = How many seconds between updates.
   
-  > These are based off your skills by pressing F2
+  > containerProficiency is based off your skills by pressing F2 and navigating to the following below.
   
   > ***containerProficiency*** = Mining and Inventory -> Inventory Manager, Container Proficiency. the percent you have boosted eg; 30 for 3 levels.
   
