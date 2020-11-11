@@ -217,13 +217,10 @@ local htmlHead, htmlFoot = [[<html><head><style>
         width:20%
     }
     .name {
-        max-width:0;
-        overflow: hidden;
-        white-space: nowrap;
         width:36%
     }
     .percent {
-        width:45%;
+        width:44%;
         font-family:bank;
         letter-spacing:-1px
     }
@@ -315,7 +312,8 @@ local getItems = function(current, section)
         end
     end
     local htmlBody = ''
-    htmlBody = htmlBody .. '<div class="head">Stars Inventory</div>'
+    local playerName = 'Stars'--export
+    htmlBody = htmlBody .. '<div class="head">Inventory</div>'
     -- Here we are going to iterate though the list at given index (current)
     -- and stop at section.
     for i = current, section do
@@ -334,14 +332,12 @@ local getItems = function(current, section)
             for y = 1, #containers do
                 local containerName = containers[y][1]
                 if containerName == oreName then
-                    local color = tiers[x][3]
                     local weight, percent, barColor = calc(containers[y][2], containers[y][3], tiers[x][2], tiers[x][4])
-                    htmlBody = htmlBody .. outHTML(oreName, color, weight, percent, barColor)
+                    htmlBody = htmlBody .. outHTML(oreName, tiers[x][3], weight, percent, barColor)
                 end
             end
         end
-        local foot = '</tbody></table>'
-        htmlBody = htmlBody .. foot
+        htmlBody = htmlBody .. '</tbody></table>'
     end
     screen.setHTML(htmlHead .. htmlBody .. htmlFoot)
     return
