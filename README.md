@@ -20,6 +20,8 @@ EG: Container name; Bauxite, Aluminium, Basic Screw, Nitron Fuel -- Please use U
   > ***hubVol*** = amount of containers connected to the hub x base volume, for large = 124000 x 10, if you have 10 containers linked.
 x8 if you have a maximum of 8 containers linked to your hubs, currently not configured to work with a hub and different size containers. So if you use hubs, you have to use them all on the same size container. Then the maximum amount of containers connected to the hubs, you x that by the base volume of the container. Hope that makes sense!
 
+  > ***Refresh*** = How many seconds between updates.
+
 ***The most important is just the container proficiency, you can leave the others default.***
 !!!!! The above parameters need to filled in correctly for the amounts to be accurate.
 
