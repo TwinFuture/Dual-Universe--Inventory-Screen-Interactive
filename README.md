@@ -1,4 +1,4 @@
-# Dual-Universe--Inventory-Screen-Interactive
+# Dual Universe Inventory Screen Interactive
 ### A simple display, using left and right on your keyboard to switch pages of items from your containers.
 
 ## INSTRUCTIONS
