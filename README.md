@@ -10,7 +10,7 @@ Part 1
 
 Part 2
 1) Name all your containers by right clicking each one with the name of the item that is inside the container.
-> Ensure all containers you want to display on screen have the exact same name as the ores/refined/item. and only contain one item each.
+> Ensure all containers you want to display on screen have the exact same name as the ores/refined/item and only contain one item each.
 EG: Container name; Bauxite, Aluminium, Basic Screw, Nitron Fuel -- Please use Uppercase letters properly!!
 2) Right click the Programming Board and Edit Lua Parameters.
   > These are based off your skills by pressing F2
