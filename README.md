@@ -14,6 +14,7 @@ Part 2
 EG: Container name; Bauxite, Aluminium, Basic Screw, Nitron Fuel -- Please use Uppercase letters properly!!
 2) Right click the Programming Board and Edit Lua Parameters.
   > These are based off your skills by pressing F2
+  
   > ***containerProficiency*** = Mining and Inventory -> Inventory Manager, Container Proficiency. the percent you have boosted eg; 30 for 3 levels.
 
 **One Final Step**.
