@@ -28,8 +28,8 @@ x8 if you have a maximum of 8 containers linked to your hubs, currently not conf
 
 ### Part 3
 
-To add more items and pages to the screen you also need to edit the list within the lua script.
-To do this, simply right click the Programming Board and edit Lua Script.
+To add more items and pages to the screen you also need to edit the list within the lua script.  
+To do this, simply right click the Programming Board and edit Lua Script.  
 To add 3 tables to a single page you would append this example to the end of the list of before a previous col
 ```lua
     {
