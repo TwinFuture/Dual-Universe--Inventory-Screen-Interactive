@@ -162,7 +162,9 @@ local core, screen = {};
 local slots = {slot1,slot2}
 
 for i = 1, #slots do
-    if slots[i].getElementClass() == 'CoreUnitStatic' then
+    if slots[i].getElementClass() == 'CoreUnitStatic'
+    or slots[i].getElementClass() == 'CoreUnitSpace'
+    or slots[i].getElementClass() == 'CoreUnitDynamic' then
         core = slots[i]
     end
     if slots[i].getElementClass() == 'ScreenUnit' then
