@@ -118,8 +118,6 @@ local itemList = {
         {'Basic Chemical Container M',15160.0,'rgba(155,194,201',1374.4},
         {'Basic Chemical Container L',2.4,'rgba(155,194,201',1.0},
         {'Basic Chemical Container XL',28.95,'rgba(155,194,201',10.0}
-        -- Decided full name trimmed, so you can search it..
-        -- Or remember every shorthand nah..
     },
     {
         cols = 2,
@@ -172,12 +170,15 @@ for i = 1, #slots do
     end
 end
 
+-- Set the refresh time.
+refresh = 10 --export
+
 -- Simple rounding function needed later.
 local round = function(number, decimals)
     local power = 10^decimals
     return math.floor(number * power) / power
 end
-
+-- HTML header and footer
 local htmlHead, htmlFoot = [[<html><head><style>
     .head {
         margin-top: -6px;
@@ -245,6 +246,7 @@ local outHTML = function(name, color, weight, percent, barColor)
 end
 
 local calc = function (maxHP, weight, mass, vol)
+    local containerProficiency = 30 --export
     local hubVol = 114400 --export
     local sizes = {
         -- Mining and Inventory, Inventory Manager, Container Proficiency.
@@ -258,14 +260,13 @@ local calc = function (maxHP, weight, mass, vol)
         {7996.00,17316.00,64000,7421.34}, --m
         {17316.00,50316.00,128000,14842.7} --l
     }
-    for z = 1, #sizes do
-        if (maxHP >= sizes[z][1] and maxHP <= sizes[z][2]) then
+    for i = 1, #sizes do
+        if (maxHP >= sizes[i][1] and maxHP <= sizes[i][2]) then
             -- displayed side by side after default ores.
-            local containerProficiency = 30 --export
-            weight = weight - sizes[z][4]
+            weight = weight - sizes[i][4]
             local amount = weight / mass
             --weight = (weight - sizes[z][4]) / mass
-            local maxLitres = sizes[z][3]
+            local maxLitres = sizes[i][3]
             local volume = maxLitres + (maxLitres * containerProficiency / 100)
             if vol then
                 percent = amount * vol / volume
@@ -301,16 +302,15 @@ end
 
 local getItems = function(current, section)
     local eleIds, containers = core.getElementIdList(), {}
-    for z = 1, #eleIds do
-        if core.getElementTypeById(eleIds[z]) == 'container'
-            or core.getElementTypeById(eleIds[z]) == 'Hub Container' then
-            local container = core.getElementNameById(eleIds[z])
+    for i = 1, #eleIds do
+        if core.getElementTypeById(eleIds[i]) == 'container'
+            or core.getElementTypeById(eleIds[i]) == 'Hub Container' then
+            local name = core.getElementNameById(eleIds[i])
             -- If not default container name, store.
-            if not string.match(container, '%[') then
+            if not string.match(name, '%[') then
                 -- Container name eg: Coal, Bauxite
-                local weight, maxHP = core.getElementMassById(eleIds[z]), core.getElementMaxHitPointsById(eleIds[z])
                 -- Name of containers, Max Hitpoints and Total Weight of container.
-                table.insert(containers, {container, maxHP, core.getElementMassById(eleIds[z])})
+                table.insert(containers, {name, core.getElementMaxHitPointsById(eleIds[i]), core.getElementMassById(eleIds[i])})
             end
         end
     end
@@ -353,8 +353,7 @@ local current = 1 -- Get from current index
 local section = current + itemList[current].cols - 1 -- Sections to display on single page.
 -- Store the amount of colums for the page so we know what to display when we press back.
 local numCols = {itemList[current].cols}
--- Set the refresh time.
-refresh = 10 --export
+
 function nextPage()
     if itemList[section+1] then
         page = page + 1;
@@ -383,4 +382,3 @@ function update()
     getItems(current,section)
     return
 end
---update()
