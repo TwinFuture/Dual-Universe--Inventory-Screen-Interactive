@@ -30,10 +30,30 @@ x8 if you have a maximum of 8 containers linked to your hubs, currently not conf
 
 To add more items and pages to the screen you also need to edit the list within the lua script.
 To do this, simply right click the Programming Board and edit Lua Script.
-
+To add 3 tables to a single page you would append this example to the end of the list of before a previous col
+```lua
+    {
+        cols = 3,
+        title = 'Basics',
+        {'Basic Ionic Chamber XS',75.1,'rgba(155,194,201',7.3},
+        {'Basic Ionic Chamber S',391.6,'rgba(155,194,201',38.2},
+        {'Basic Ionic Chamber M',2070.0,'rgba(155,194,201',202.4}
+    },
+    {
+        title='Basics Elec',
+        {'Basic Component',2.25,'rgba(155,194,201',0.5},
+        {'Basic Connector',3.75,'rgba(155,194,201',0.8},
+        {'Basic Electronics',5.22,'rgba(155,194,201',4.0}
+    },
+    {
+        title = 'Fuels',
+        {'Nitron Fuel',4.0,'rgba(155,194,201'},
+        {'Kergon X2 Fuel',6.0,'rgba(155,194,201'},
+        {'Kergon X4 Fuel',6.0,'rgba(155,194,201'}
+    },
+```
 col = the amount of tables to display on a single page, only write this once per set of tables {}  
-title = the title of each table.  
-More coming soon on format... Posting other screen setups.
+title = the title of each table. 
 
 ### Final Step
 1) Activate the Programming board and wait the amount of refresh before the screen will update with your ores.
