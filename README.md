@@ -34,3 +34,6 @@ To do this, simply right click the Programming Board and edit Lua Script.
 col = the amount of tables to display on a single page, only write this once and add your tables using {}  
 title = the title of each table.  
 More coming soon on format... Posting other screen setups.
+
+### Final Step
+1) Activate the Programming board and wait the amount of refresh before the screen will update with your ores.
