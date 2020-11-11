@@ -26,5 +26,6 @@ x8 if you have a maximum of 8 containers linked to your hubs, currently not conf
 !!!!! The above parameters need to filled in correctly for the amounts to be accurate.
 
 Part 3
+
 To add more items and pages to the screen you also need to edit the list within the lua script.
 To do this, simply right click the Programming Board and edit Lua Script.
