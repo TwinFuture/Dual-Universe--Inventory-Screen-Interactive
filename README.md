@@ -5,7 +5,7 @@
 
 ### Part 1
 1) Simply get a programming board, plug it into the main core of the construct and 1 Screen.
-2) Download / Copy [Resource-Screen-Interactive.json](https://raw.githubusercontent.com/TwinFuture/Dual-Universe--Inventory-Screen-Interactive/main/Resource-Screen-Interactive.json)
+2) Download / Copy [Inventory-Screen-Interactive.json](https://raw.githubusercontent.com/TwinFuture/Dual-Universe--Inventory-Screen-Interactive/main/Inventory-Screen-Interactive.json)
 3) Right click the programming board and select Advanced -> Paste Lua Configuration From Clipboard
 
 ### Part 2
