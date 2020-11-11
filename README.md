@@ -32,6 +32,7 @@ To add more items and pages to the screen you also need to edit the list within 
 To do this, simply right click the Programming Board and edit Lua Script.
 
 col = the amount of tables to display on a single page, only write this once and add your tables using {}
+
 title = the title of each table.
 
 More coming soon on format... Posting other screen setups.
