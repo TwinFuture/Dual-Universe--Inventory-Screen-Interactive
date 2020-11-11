@@ -25,5 +25,6 @@ x8 if you have a maximum of 8 containers linked to your hubs, currently not conf
 ***The most important is just the container proficiency, you can leave the others default.***
 !!!!! The above parameters need to filled in correctly for the amounts to be accurate.
 
-
-**One Final Step**.
+Part 3
+To add more items and pages to the screen you also need to edit the list within the lua script.
+To do this, simply right click the Programming Board and edit Lua Script.
