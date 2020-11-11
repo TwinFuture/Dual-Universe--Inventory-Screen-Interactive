@@ -1,5 +1,5 @@
 # Dual Universe Inventory Screen Interactive
-### A simple display, using left and right on your keyboard to switch pages of items from your containers.
+### A simple display, using left and right on your keyboard to switch pages of items from your containers, with predefined colums and titles.
 ![preview1](https://raw.githubusercontent.com/TwinFuture/Dual-Universe--Inventory-Screen-Interactive/main/images/2020-11-11%20(3).png) ![preview2](https://raw.githubusercontent.com/TwinFuture/Dual-Universe--Inventory-Screen-Interactive/main/images/2020-11-11%20(2).png)
 
 ## INSTRUCTIONS
@@ -30,4 +30,6 @@ x8 if you have a maximum of 8 containers linked to your hubs, currently not conf
 
 To add more items and pages to the screen you also need to edit the list within the lua script.
 To do this, simply right click the Programming Board and edit Lua Script.
+col = the amount of tables to display on a single page, only write this once and add your tables using {}
+title = the title of each table.
 More coming soon on format... Posting other screen setups.
