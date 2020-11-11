@@ -31,7 +31,7 @@ x8 if you have a maximum of 8 containers linked to your hubs, currently not conf
 To add more items and pages to the screen you also need to edit the list within the lua script.
 To do this, simply right click the Programming Board and edit Lua Script.
 
-col = the amount of tables to display on a single page, only write this once and add your tables using {}  
+col = the amount of tables to display on a single page, only write this once per set of tables {}  
 title = the title of each table.  
 More coming soon on format... Posting other screen setups.
 
