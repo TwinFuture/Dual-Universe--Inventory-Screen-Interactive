@@ -228,13 +228,13 @@ local htmlHead, htmlFoot = [[<html><head><style>
         padding:2px
     }
 </style></head><body>]], '</body></html>'
-local outHTML = function(name, color, weight, percent, barColor)
+local outHTML = function(name, color, amount, percent, barColor)
 	if name:len() > 16 then
         name = name:sub(0,14)..'..'..name:sub(-2)
      end
     return [[<tr>
     <td class="name" style="border: 1px solid ]]..color..',1); background-color:'..color..', 0.6)"><div>'..name..[[</div></td>
-    <td class="amount" style="border: 1px solid ]]..color..',1); background-color:'..color..', 0.6)">'..weight..[[</td>
+    <td class="amount" style="border: 1px solid ]]..color..',1); background-color:'..color..', 0.6)">'..amount..[[</td>
     <td class="percent" style="border: 1px solid ]]..color..[[,1);">
     <div class="bar" style="width: ]]..percent..'%; background-color: '.. barColor ..'">'..percent..[[%</div>
     </td>
@@ -260,9 +260,7 @@ local calc = function (maxHP, weight, mass, vol)
     for i = 1, #sizes do
         if (maxHP >= sizes[i][1] and maxHP <= sizes[i][2]) then
             -- displayed side by side after default ores.
-            weight = weight - sizes[i][4]
-            local amount = weight / mass
-            --weight = (weight - sizes[z][4]) / mass
+            local amount = (weight - sizes[i][4]) / mass
             local maxLitres = sizes[i][3]
             local volume = maxLitres + (maxLitres * containerProficiency / 100)
             if vol then
@@ -311,9 +309,7 @@ local getItems = function(current, section)
             end
         end
     end
-    local htmlBody = ''
-    local playerName = 'Stars'--export
-    htmlBody = htmlBody .. '<div class="head">Inventory</div>'
+    local htmlBody = '<div class="head">Stars Inventory</div>'
     -- Here we are going to iterate though the list at given index (current)
     -- and stop at section.
     for i = current, section do
@@ -332,8 +328,8 @@ local getItems = function(current, section)
             for y = 1, #containers do
                 local containerName = containers[y][1]
                 if containerName == oreName then
-                    local weight, percent, barColor = calc(containers[y][2], containers[y][3], tiers[x][2], tiers[x][4])
-                    htmlBody = htmlBody .. outHTML(oreName, tiers[x][3], weight, percent, barColor)
+                    local amount, percent, barColor = calc(containers[y][2], containers[y][3], tiers[x][2], tiers[x][4])
+                    htmlBody = htmlBody .. outHTML(oreName, tiers[x][3], amount, percent, barColor)
                 end
             end
         end
