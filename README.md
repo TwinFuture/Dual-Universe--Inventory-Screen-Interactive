@@ -34,8 +34,8 @@ To add 3 tables to a single page you would append this example to the end of the
 For each item within the tables, you will need to insert its name, unit mass, color for background and unit volume if there is one, leave out if none.
 You can get the unit mass and unit volume by inspecting item, from inventory, market, craft.
 
-In the example below, you can see the first table only has the cols listed for that page
-under fuels you will also see there is no unit volume.
+In the example below, you can see the first table only has the cols listed for that page.  
+Under fuels you will also see there is no unit volume.
 ```lua
 --------{NAME, UNIT MASS, COLOR, UNIT VOLUME}----------
     {
