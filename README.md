@@ -1,5 +1,7 @@
 # Dual Universe Inventory Screen Interactive
 ### A simple display, using left and right on your keyboard to switch pages of items from your containers.
+![preview1](https://raw.githubusercontent.com/TwinFuture/Dual-Universe--Inventory-Screen-Interactive/main/images/2020-11-11%20(3).png)
+![preview2](https://raw.githubusercontent.com/TwinFuture/Dual-Universe--Inventory-Screen-Interactive/main/images/2020-11-11%20(2).png)
 
 ## INSTRUCTIONS
 
